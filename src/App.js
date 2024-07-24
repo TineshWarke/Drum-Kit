@@ -9,7 +9,7 @@ import crash from "./Sounds/crash.mp3";
 import snare from "./Sounds/snare.mp3";
 import floor_tom from './Sounds/floor-tom.mp3';
 import ride from './Sounds/ride-cymbal.mp3';
-
+ 
 function App() {
   var [Tom1] = useSound(tom_1);
   var [Tom2] = useSound(tom_2);
@@ -110,7 +110,7 @@ function App() {
     return () => {
       document.removeEventListener('keydown', keyDownHandler);
     };
-  }, []);
+  }, [, Tom1, Tom2, Floor_Tom, Snare, Ride, Crash, Bass]);
 
   return (
     <div className="App">
